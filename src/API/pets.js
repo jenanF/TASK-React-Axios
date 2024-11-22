@@ -15,5 +15,20 @@ async function getPetById(id) {
 
 };
 
+async function addPet(pet) {
 
-export { getAllPets, getPetById };
+    const response = await instance.post("/pets/", pet);
+    return response;
+
+};
+
+async function detetePet(id) {
+
+    const response = await instance.delete("/pets/", id);
+    return response;
+
+};
+
+
+
+export { getAllPets, getPetById, addPet, detetePet };

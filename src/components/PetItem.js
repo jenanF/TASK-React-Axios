@@ -1,4 +1,14 @@
 import React from "react";
+import PetDetail from "./PetDetail";
+
+function passId(p) {
+
+  console.log(p.id)
+  return (
+    <PetDetail id={p.id} />
+  )
+
+}
 
 const PetItem = ({ pet }) => {
   return (
@@ -10,7 +20,7 @@ const PetItem = ({ pet }) => {
         className="w-[200px] rounded-md
       "
       />
-      <button className=" border border-black px-5 py-1 rounded-md hover:bg-[black] hover:text-white">
+      <button className=" border border-black px-5 py-1 rounded-md hover:bg-[black] hover:text-white" onClick={() => passId(pet)}>
         View
       </button>
     </div>
